@@ -1,2 +1,1 @@
-# template-hackathon-terraform
-Template for Hackathon with Terraform
+# Infrastructure as Code by Terraform
