@@ -25,5 +25,13 @@ resource "yandex_api_gateway" "this" {
             http_code: 200
             content:
               "application/json": "{ \"status\": \"UP\" }"
+      /api/logics:
+        get:
+          summary: Get logics
+          operationId: getLogics
+          x-yc-apigateway-integration:
+            type: serverless_containers
+            container_id: ${yandex_serverless_container.py_app.id}
+            service_account_id: ${yandex_serverless_container.py_app.service_account_id}
   EOT
 }
