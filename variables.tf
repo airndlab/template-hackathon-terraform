@@ -19,6 +19,13 @@ variable "service_account_id" {
   sensitive   = true
 }
 
+variable "service_account_key_file" {
+  type        = string
+  description = "Path to or content of service account file in json format"
+  nullable    = false
+  sensitive   = true
+}
+
 variable "hack_name" {
   type        = string
   description = "Short name of hackathon"
