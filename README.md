@@ -6,6 +6,7 @@
 
 ```shell
 export TF_CLI_CONFIG_FILE=./yandex.tfrc
+export YC_SERVICE_ACCOUNT_KEY_FILE=./sa-key.json
 ```
 
 ```shell

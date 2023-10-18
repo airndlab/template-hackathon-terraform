@@ -1,4 +1,5 @@
 .idea/
+sa-key.json
 
 # Local .terraform directories
 **/.terraform/*
