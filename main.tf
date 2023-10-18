@@ -11,3 +11,7 @@ provider "yandex" {
   cloud_id  = var.cloud_id
   folder_id = var.folder_id
 }
+
+data "yandex_container_registry" "this" {
+  name = "${var.hack_name}-cr"
+}
