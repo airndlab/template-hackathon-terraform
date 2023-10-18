@@ -26,6 +26,13 @@ variable "service_account_key_file" {
   sensitive   = true
 }
 
+variable "container_registry_id" {
+  type        = string
+  description = "ID of container registry_id in folder"
+  nullable    = false
+  sensitive   = true
+}
+
 variable "hack_name" {
   type        = string
   description = "Short name of hackathon"

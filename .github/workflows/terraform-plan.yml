@@ -14,6 +14,7 @@ jobs:
       TF_VAR_folder_id: ${{ secrets.YC_FOLDER_ID }}
       TF_VAR_service_account_id: ${{ secrets.YC_SERVICE_ACCOUNT_ID }}
       TF_VAR_service_account_key_file: ${{ secrets.YC_SERVICE_ACCOUNT_KEY_FILE }}
+      TF_VAR_container_registry_id: ${{ secrets.YC_CONTAINER_REGISTRY_ID }}
       TF_VAR_hack_name: ${{ vars.HACK_NAME }}
 
     steps:

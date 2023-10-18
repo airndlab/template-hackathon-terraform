@@ -13,6 +13,7 @@ Official article -
 - `folderId` - copy folder id
 - `saId` - copy sa id
 - `./sa-key.json` - get sa key and save to file
+- `crId` - copy cr id
 - `hackName` - short name of hackathon
 
 ### Create `./terraform.tfvars` with secrets
@@ -22,6 +23,7 @@ cloud_id                 = "{cloudId}"
 folder_id                = "{folderId}"
 service_account_id       = "{saId}"
 service_account_key_file = "./sa-key.json"
+container_registry_id    = "{crId}"
 hack_name                = "{hackName}"
 ```
 
