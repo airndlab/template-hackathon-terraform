@@ -37,6 +37,30 @@ Use [official doc](https://cloud.yandex.com/en-ru/docs/storage/quickstart#the-fi
 
 After we have `bucket`.
 
+## Bootstrap CI/CD with GitHub Actions
+
+### Create secrets
+
+Use [official doc](https://docs.github.com/ru/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository).
+
+```properties
+YC_CLOUD_ID={cloud_id}
+YC_FOLDER_ID={folder_id}
+YC_SERVICE_ACCOUNT_ID={sa_id}
+YC_SERVICE_ACCOUNT_KEY_FILE={content of sa-key.json}
+YC_OBJECT_STORAGE_ACCESS_KEY={access_key}
+YC_OBJECT_STORAGE_SECRET_KEY={secret_key}
+YC_OBJECT_STORAGE_BUCKET={bucket}
+```
+
+### Create variables
+
+Use [official doc](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository).
+
+```properties
+HACK_NAME={hack_name}
+```
+
 ## Local development
 
 Official article -
