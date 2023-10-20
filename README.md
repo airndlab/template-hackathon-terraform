@@ -37,6 +37,12 @@ Use [official doc](https://cloud.yandex.com/en-ru/docs/storage/quickstart#the-fi
 
 After we have `bucket`.
 
+### Create container registry
+
+Use [official doc](https://cloud.yandex.com/en-ru/docs/container-registry/operations/registry/registry-create).
+
+After we have `cr_id`.
+
 ## Bootstrap CI/CD with GitHub Actions
 
 ### Create secrets
@@ -48,6 +54,7 @@ YC_CLOUD_ID={cloud_id}
 YC_FOLDER_ID={folder_id}
 YC_SERVICE_ACCOUNT_ID={sa_id}
 YC_SERVICE_ACCOUNT_KEY_FILE={content of sa-key.json}
+YC_CONTAINER_REGISTRY_ID={cr_id}
 YC_OBJECT_STORAGE_ACCESS_KEY={access_key}
 YC_OBJECT_STORAGE_SECRET_KEY={secret_key}
 YC_OBJECT_STORAGE_BUCKET={bucket}
@@ -75,6 +82,7 @@ cloud_id                 = "{cloud_id}"
 folder_id                = "{folder_id}"
 service_account_id       = "{sa_id}"
 service_account_key_file = "./sa-key.json"
+container_registry_id    = "{cr_id}"
 hack_name                = "{hack_name}"
 ```
 
