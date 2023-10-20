@@ -11,9 +11,6 @@ jobs:
       TF_VAR_folder_id: ${{ secrets.YC_FOLDER_ID }}
       TF_VAR_service_account_id: ${{ secrets.YC_SERVICE_ACCOUNT_ID }}
       TF_VAR_service_account_key_file: ${{ secrets.YC_SERVICE_ACCOUNT_KEY_FILE }}
-      TF_VAR_object_storage_bucket: ${{ secrets.YC_OBJECT_STORAGE_BUCKET }}
-      TF_VAR_object_storage_access_key: ${{ secrets.YC_OBJECT_STORAGE_ACCESS_KEY }}
-      TF_VAR_object_storage_secret_key: ${{ secrets.YC_OBJECT_STORAGE_SECRET_KEY }}
       TF_VAR_container_registry_id: ${{ secrets.YC_CONTAINER_REGISTRY_ID }}
       TF_VAR_hack_name: ${{ vars.HACK_NAME }}
 
@@ -25,7 +22,15 @@ jobs:
         uses: hashicorp/setup-terraform@v2
 
       - name: Terraform init
-        run: terraform init
+        env:
+          BUCKET: ${{ secrets.YC_OBJECT_STORAGE_BUCKET }}
+          ACCESS_KEY: ${{ secrets.YC_OBJECT_STORAGE_ACCESS_KEY }}
+          SECRET_KEY: ${{ secrets.YC_OBJECT_STORAGE_SECRET_KEY }}
+        run: |
+          terraform init \
+            -backend-config="bucket=$BUCKET" \
+            -backend-config="access_key=$ACCESS_KEY" \
+            -backend-config="secret_key=$SECRET_KEY"
 
       - name: Terraform validate
         run: terraform validate
