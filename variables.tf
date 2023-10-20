@@ -26,27 +26,6 @@ variable "service_account_key_file" {
   sensitive   = true
 }
 
-variable "object_storage_bucket" {
-  type        = string
-  description = "Bucket name of object storage"
-  nullable    = false
-  sensitive   = true
-}
-
-variable "object_storage_access_key" {
-  type        = string
-  description = "Access key of object storage"
-  nullable    = false
-  sensitive   = true
-}
-
-variable "object_storage_secret_key" {
-  type        = string
-  description = "Secret key of object storage"
-  nullable    = false
-  sensitive   = true
-}
-
 variable "container_registry_id" {
   type        = string
   description = "ID of container registry_id in folder"

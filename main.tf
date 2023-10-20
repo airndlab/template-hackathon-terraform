@@ -7,9 +7,12 @@ terraform {
   required_version = ">= 0.13"
 
   backend "s3" {
-    endpoint   = "storage.yandexcloud.net"
-    region     = "ru-central1"
+    endpoints = {
+      s3 = "https://storage.yandexcloud.net"
+    }
+    region = "ru-central1"
 
+    skip_requesting_account_id  = true
     skip_region_validation      = true
     skip_credentials_validation = true
   }

@@ -36,7 +36,14 @@ export TF_CLI_CONFIG_FILE=./yandex.tfrc
 ### Init terraform
 
 ```shell
-terraform init
+export KEY={hackName}/terraform.tfstate
+export BUCKET={bucketName}
+export ACCESS_KEY={accessKey}
+export SECRET_KEY={secretKey}
+```
+
+```shell
+terraform init -backend-config="key=$KEY" -backend-config="bucket=$BUCKET" -backend-config="access_key=$ACCESS_KEY" -backend-config="secret_key=$SECRET_KEY"
 ```
 
 ### Lock mirroring
