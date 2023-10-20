@@ -51,7 +51,6 @@ cloud_id                 = "{cloud_id}"
 folder_id                = "{folder_id}"
 service_account_id       = "{sa_id}"
 service_account_key_file = "./sa-key.json"
-container_registry_id    = "{crId}"
 hack_name                = "{hack_name}"
 ```
 
