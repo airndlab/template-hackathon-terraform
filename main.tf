@@ -9,10 +9,6 @@ terraform {
   backend "s3" {
     endpoint   = "storage.yandexcloud.net"
     region     = "ru-central1"
-    key        = "${var.hack_name}/terraform.tfstate"
-    bucket     = var.object_storage_bucket
-    access_key = var.object_storage_access_key
-    secret_key = var.object_storage_secret_key
 
     skip_region_validation      = true
     skip_credentials_validation = true

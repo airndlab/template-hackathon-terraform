@@ -26,11 +26,13 @@ jobs:
 
       - name: Terraform init
         env:
+          KEY: ${{ vars.HACK_NAME }}/terraform.tfstate
           BUCKET: ${{ secrets.YC_OBJECT_STORAGE_BUCKET }}
           ACCESS_KEY: ${{ secrets.YC_OBJECT_STORAGE_ACCESS_KEY }}
           SECRET_KEY: ${{ secrets.YC_OBJECT_STORAGE_SECRET_KEY }}
         run: |
           terraform init \
+            -backend-config="key=$KEY" \
             -backend-config="bucket=$BUCKET" \
             -backend-config="access_key=$ACCESS_KEY" \
             -backend-config="secret_key=$SECRET_KEY"
