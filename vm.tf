@@ -8,6 +8,7 @@ resource "yandex_compute_instance" "this" {
   platform_id               = "standard-v3"
   name                      = "${var.hack_name}-vm"
   zone                      = "ru-central1-b"
+  service_account_id        = var.service_account_id
   allow_stopping_for_update = true
 
   resources {
