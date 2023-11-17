@@ -39,3 +39,10 @@ variable "hack_name" {
   nullable    = false
   sensitive   = false
 }
+
+variable "domain" {
+  type        = string
+  description = "Domain"
+  nullable    = false
+  sensitive   = true
+}

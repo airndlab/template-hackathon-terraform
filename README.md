@@ -75,7 +75,8 @@ Official article -
 
 ### Create `./terraform.tfvars` with secrets
 
-`hack_name` - short name of hackathon.
+- `hack_name` - short name of hackathon.
+- `domain` - domain (for example `hackathon.example.com`).
 
 ```terraform
 cloud_id                 = "{cloud_id}"
@@ -84,6 +85,7 @@ service_account_id       = "{sa_id}"
 service_account_key_file = "./sa-key.json"
 container_registry_id    = "{cr_id}"
 hack_name                = "{hack_name}"
+domain                   = "{domain}"
 ```
 
 ### Set local configuration
