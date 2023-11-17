@@ -1,0 +1,20 @@
+services:
+#  jupyter:
+#    restart: always
+#    image: quay.io/jupyter/scipy-notebook:2023-10-31
+#    ports:
+#      - 8888:8888
+#    command: start-notebook.sh --NotebookApp.token=iddqd
+#    privileged: true
+  nextjs:
+    restart: always
+    image: airndlab/template-hackathon-nextjs:0.1.0
+    environment:
+      - PY_FASTAPI_SERVICE_URL=http://py-fastapi:8080
+    ports:
+      - 3000:3000
+  py-fastapi:
+    restart: always
+    image: airndlab/template-hackathon-python-fastapi:0.1.0
+    ports:
+      - 8080:8080
