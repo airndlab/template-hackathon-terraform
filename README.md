@@ -89,7 +89,7 @@ hack_name                = "{hack_name}"
 ### Set local configuration
 
 ```shell
-export TF_CLI_CONFIG_FILE=./yandex.tfrc
+export TF_CLI_CONFIG_FILE=./provider_installation.tfrc
 ```
 
 ### Init terraform
