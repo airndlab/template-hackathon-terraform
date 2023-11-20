@@ -40,7 +40,7 @@ variable "hack_name" {
   sensitive   = false
 }
 
-variable "domain" {
+variable "hack_domain" {
   type        = string
   description = "Domain"
   nullable    = false

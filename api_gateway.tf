@@ -6,7 +6,7 @@ resource "yandex_api_gateway" "this" {
   }
 
   custom_domains {
-    fqdn           = var.domain
+    fqdn           = var.hack_domain
     certificate_id = yandex_cm_certificate.this.id
   }
 

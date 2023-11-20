@@ -49,6 +49,8 @@ After we have `cr_id`.
 
 Use [official doc](https://docs.github.com/ru/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository).
 
+- `hack_domain` - domain of hackathon (for example `hackathon.example.com`).
+
 ```properties
 YC_CLOUD_ID={cloud_id}
 YC_FOLDER_ID={folder_id}
@@ -58,6 +60,7 @@ YC_CONTAINER_REGISTRY_ID={cr_id}
 YC_OBJECT_STORAGE_ACCESS_KEY={access_key}
 YC_OBJECT_STORAGE_SECRET_KEY={secret_key}
 YC_OBJECT_STORAGE_BUCKET={bucket}
+HACK_DOMAIN={hack_domain}
 ```
 
 ### Create variables
@@ -76,7 +79,7 @@ Official article -
 ### Create `./terraform.tfvars` with secrets
 
 - `hack_name` - short name of hackathon.
-- `domain` - domain (for example `hackathon.example.com`).
+- `hack_domain` - domain of hackathon.
 
 ```terraform
 cloud_id                 = "{cloud_id}"
@@ -85,7 +88,7 @@ service_account_id       = "{sa_id}"
 service_account_key_file = "./sa-key.json"
 container_registry_id    = "{cr_id}"
 hack_name                = "{hack_name}"
-domain                   = "{domain}"
+hack_domain              = "{hack_domain}"
 ```
 
 ### Set local configuration
