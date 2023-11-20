@@ -90,6 +90,8 @@ domain                   = "{domain}"
 
 ### Set local configuration
 
+**TL;DR** Run `local.sh`
+
 ```shell
 export TF_CLI_CONFIG_FILE=./provider_installation.tfrc
 ```
